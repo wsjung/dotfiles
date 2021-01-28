@@ -1,5 +1,22 @@
 set encoding=utf-8
 
+set nocompatible  " vundle requirement
+filetype off      " vundle requirement
+
+" set runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+" all Plugins must be added before following line
+
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+call vundle#end()
+filetype plugin indent on " vundle requirement
+
 syntax on
 set number
 
@@ -22,3 +39,9 @@ set noexpandtab
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
+
+" Make it obvious where 80 characters is
+"set textwidth=80
+"set colorcolumn=+1
+
+
